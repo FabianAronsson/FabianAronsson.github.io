@@ -1,3 +1,8 @@
+/* 
+------------- Color Scheme ------------
+#8ECAE6 #219EBC #023047 #734B5E #F5D3C8 
+*/
+
 @font-face {
     font-family: Elza;
     src: url(./fonts/ElzaTextTrial-Regular.otf);
@@ -14,12 +19,12 @@
 }
 
 .nav-item:hover {
-    background: gray;
+    background: #734B5E;
     border-radius: 5rem;
 }
 
 .nav-item:hover>a {
-    color: aliceblue;
+    color: #F5D3C8;
 }
 
 .nav-item {
@@ -28,13 +33,19 @@
     font-family: Elza;
 }
 
+.nav-item>a {
+    color: #F5D3C8;
+}
+
 .navbar-brand,
 .offcanvas-title {
     font-family: Elza;
+    color: #023047;
 }
 
 .brand-logo {
     width: 4rem;
+    padding: 0.2rem;
 }
 
 .navbar-brand,
@@ -46,7 +57,57 @@
 #brand-font {
     font-size: 2rem;
     margin-left: 0.5rem;
+    color: #F5D3C8;
 }
 
+.navigation-bar {
+    background-color: #023047;
+}
 
-/* #8ECAE6 #219EBC #023047 #AABD8C #E9E3B4 */
+#offcanvasNavbar {
+    background-color: #023047;
+}
+
+#offcanvasNavbarLabel {
+    color: #F5D3C8;
+}
+
+#main-navbar {
+    padding: 0;
+}
+
+#navbar-button {
+    background-color: #F5D3C8;
+}
+
+.container-test {
+    margin-top: 5rem;
+    min-height: 80vh;
+}
+
+.footer-item {
+    font-size: 1.2em;
+    font-family: Elza;
+}
+
+.footer {
+    color: #023047;
+}
+
+.offcanvas-logo {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    margin-bottom: 5rem;
+}
+
+#canvas-logo:hover {
+    background-color: #023047;
+}
+
+@media screen and (max-width: 382px) {
+    #brand-font {
+        font-size: 1.5rem;
+    }
+}
