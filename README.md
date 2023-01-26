@@ -23,9 +23,9 @@ Den tredje delen ska lista företagets tjänster/produkter. Dessa ska listas på
    * Visa kundvagnen.
    * Lägga till och ta bort saker ur kundvagnen.
 * Sidorna uppnår minst 80% i Lighthouse på Best Practices i både Mobile och Desktop.
-~~* Hemsidan nyttjar minst två typsnitt.~~
-~~* Hemsidan har ett färsgschema med minst 3 färger (utöver vitt och svart).~~
-~~* Man nyttjar Bootstrap (eller liknande css-bibliotek).~~
+* ~~Hemsidan nyttjar minst två typsnitt.~~
+* ~~Hemsidan har ett färsgschema med minst 3 färger (utöver vitt och svart).~~
+* ~~Man nyttjar Bootstrap (eller liknande css-bibliotek).~~
 * På sidan "Om Oss" Ska man kunna se adressen i en inbakad Google Maps-modul.
 
 ### Krav för VG
