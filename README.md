@@ -24,6 +24,7 @@ Tjänster för tex hemstäd, fönstertvätt, garagerensning osv.
 Hunddagis
 Tjänster som tex kloklipp, pälsvård osv.
 Bedömning
+
 Krav för G
 Alla delar beskrivna ovan finns med.
 Sidan är uppdelad på ett strukturerat sätt med minst tre HTML- och CSS-filer.
@@ -36,6 +37,7 @@ Hemsidan nyttjar minst två typsnitt.
 Hemsidan har ett färsgschema med minst 3 färger (utöver vitt och svart).
 Man nyttjar Bootstrap (eller liknande css-bibliotek).
 På sidan "Om Oss" Ska man kunna se adressen i en inbakad Google Maps-modul.
+
 Krav för VG
 Alla krav för G är uppfyllda.
 Man ska på något sätt anropa ett öppet API för att hämta intressant information. (tex väder, valuta-kurser eller annat som är relevant för sidan) Här finns publika apier
