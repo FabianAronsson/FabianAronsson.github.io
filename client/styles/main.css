@@ -1,4 +1,52 @@
-p {
-    font-size: 12rem;
-    background-color: lightblue;
+@font-face {
+    font-family: Elza;
+    src: url(./fonts/ElzaTextTrial-Regular.otf);
 }
+
+@font-face {
+    font-family: Elza-Bold;
+    src: url(./fonts/ElzaTrial-BlackOblique.otf);
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url(./fonts/OpenSans-Regular.ttf);
+}
+
+.nav-item:hover {
+    background: gray;
+    border-radius: 5rem;
+}
+
+.nav-item:hover>a {
+    color: aliceblue;
+}
+
+.nav-item {
+    font-size: 1.7em;
+    text-align: center;
+    font-family: Elza;
+}
+
+.navbar-brand,
+.offcanvas-title {
+    font-family: Elza;
+}
+
+.brand-logo {
+    width: 4rem;
+}
+
+.navbar-brand,
+.offcanvas-title,
+.nav-item {
+    font-family: Elza-Bold;
+}
+
+#brand-font {
+    font-size: 2rem;
+    margin-left: 0.5rem;
+}
+
+
+/* #8ECAE6 #219EBC #023047 #AABD8C #E9E3B4 */
