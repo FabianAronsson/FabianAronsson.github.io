@@ -3,6 +3,10 @@
 #8ECAE6 #219EBC #023047 #734B5E #F5D3C8 
 */
 
+body {
+    font-family: "Times New Roman", Times, serif;
+}
+
 @font-face {
     font-family: Elza;
     src: url(./fonts/ElzaTextTrial-Regular.otf);
@@ -104,6 +108,30 @@
 
 #canvas-logo:hover {
     background-color: #023047;
+}
+
+.mt-rem-4 {
+    margin-top: 4.5rem;
+}
+
+#svgtest {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 0;
+}
+
+.information-content {
+    font-family: OpenSans;
+}
+
+.cta-button {
+    background-color: #044465 !important;
+    color: white !important;
+    margin-top: 5rem;
+    font-size: 2rem !important;
+}
+
+.main-content {
+    padding-bottom: 10vh;
 }
 
 @media screen and (max-width: 382px) {
