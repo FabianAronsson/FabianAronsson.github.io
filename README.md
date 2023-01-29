@@ -2,15 +2,13 @@
 
 ## Uppdraget
 
-Den första delen är en landningssida där man ska kunna se företagets namn en passande bild och en passande välkomsttext.
-
 Den andra delen är en "Om Oss"-sida där man ska kunna läsa om företaget, kontaktuppgifter och address.
 
 Den tredje delen ska lista företagets tjänster/produkter. Dessa ska listas på ett snyggt sätt med hjälp av en JavaScript-array. Varje tjänst/produkt ska ha en passande bild. Här ska också finnas någon enkel form av kundvagn.
 
 ## Förslag på företag:
 * Marknadsplats för pokémonkort
-  * Agerar som en mellanhand för köp och sälj mellan pokémonkort
+  * Agerar som en mellanhand för köp och sälj av pokémonkort
 
 
 ## Bedömning
