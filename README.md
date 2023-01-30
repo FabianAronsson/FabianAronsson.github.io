@@ -2,7 +2,9 @@
 
 ## Uppdraget
 
-Den andra delen är en "Om Oss"-sida där man ska kunna läsa om företaget, kontaktuppgifter och address.
+~~Den första delen är en landningssida där man ska kunna se företagets namn en passande bild och en passande välkomsttext.~~
+
+~~Den andra delen är en "Om Oss"-sida där man ska kunna läsa om företaget, kontaktuppgifter och address.~~
 
 Den tredje delen ska lista företagets tjänster/produkter. Dessa ska listas på ett snyggt sätt med hjälp av en JavaScript-array. Varje tjänst/produkt ska ha en passande bild. Här ska också finnas någon enkel form av kundvagn.
 
@@ -15,7 +17,7 @@ Den tredje delen ska lista företagets tjänster/produkter. Dessa ska listas på
 
 ### Krav för G
 * Alla delar beskrivna ovan finns med.
-* Sidan är uppdelad på ett strukturerat sätt med **minst tre** HTML- och CSS-filer.
+* ~~Sidan är uppdelad på ett strukturerat sätt med **minst tre** HTML- och CSS-filer.~~
 *  Det finns en site.js-fil som innehåller funktionaliteten för att:
    * Visa listan av produkter/tjänster. 
    * Visa kundvagnen.
@@ -24,7 +26,7 @@ Den tredje delen ska lista företagets tjänster/produkter. Dessa ska listas på
 * ~~Hemsidan nyttjar minst två typsnitt.~~
 * ~~Hemsidan har ett färsgschema med minst 3 färger (utöver vitt och svart).~~
 * ~~Man nyttjar Bootstrap (eller liknande css-bibliotek).~~
-* På sidan "Om Oss" Ska man kunna se adressen i en inbakad Google Maps-modul.
+* ~~På sidan "Om Oss" Ska man kunna se adressen i en inbakad Google Maps-modul.~~
 
 ### Krav för VG
 * Alla krav för G är uppfyllda.
