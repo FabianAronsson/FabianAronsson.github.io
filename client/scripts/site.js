@@ -9,24 +9,22 @@ class Card {
 }
 
 class Price {
-    constructor(averageSellPrice, lowPrice, trendPrice, reverseHoloSell, reverseHoloLow, reverseHoloTrend, lowPriceExPlus, avg1, avg7, avg30, reverseHoloAvg1, reverseHoloAvg7, reverseHoloAvg30) {
+    constructor(averageSellPrice, lowPrice, trendPrice, avg1, avg7, avg30) {
         this.averageSellPrice = averageSellPrice;
         this.lowPrice = lowPrice;
         this.trendPrice = trendPrice;
-        this.reverseHoloSell = reverseHoloSell;
-        this.reverseHoloLow = reverseHoloLow;
-        this.reverseHoloTrend = reverseHoloTrend;
-        this.lowPriceExPlus = lowPriceExPlus;
         this.avg1 = avg1;
         this.avg7 = avg7;
         this.avg30 = avg30;
-        this.reverseHoloAvg1 = reverseHoloAvg1;
-        this.reverseHoloAvg7 = reverseHoloAvg7;
-        this.reverseHoloAvg30 = reverseHoloAvg30;
     }
-} //https://images.pokemontcg.io/xy1/1.png  https://images.pokemontcg.io/xy9/120_hires.png https://images.pokemontcg.io/g1/23_hires.png https://images.pokemontcg.io/g1/RC29_hires.png
+}
 
-const productCards = [new Card('xy1-1', 'Venusaur-EX', 'Eske Yoshinob', '2014/02/05', '../images/test/1_hires.webp'), new Card('xy9-120', 'M Scizor-EX', '5ban Graphics', '2016/02/03', '../images/test/120_hires.webp'), new Card('g1-23', 'Gyarados', 'Shin Nagasawa', '2016/02/22', '../images/test/23_hires.webp'), new Card('g1-RC29', 'Pikachu', 'Kagemaru Himeno', '2016/02/22', '../images/test/RC29_hires.webp')]
+const productCards = [
+    new Card('xy1-1', 'Venusaur-EX', 'Eske Yoshinob', '2014/02/05', '../images/productImages/1_hires.webp'),
+    new Card('xy9-120', 'M Scizor-EX', '5ban Graphics', '2016/02/03', '../images/productImages/120_hires.webp'),
+    new Card('g1-23', 'Gyarados', 'Shin Nagasawa', '2016/02/22', '../images/productImages/23_hires.webp'),
+    new Card('g1-RC29', 'Pikachu', 'Kagemaru Himeno', '2016/02/22', '../images/productImages/RC29_hires.webp')
+]
 
 window.onload = async() => {
     const productsContainer = document.querySelector('#productsContainer');
@@ -52,11 +50,11 @@ window.onload = async() => {
 
         let image = document.createElement('img');
         image.src = product.image;
-        image.className = 'img-fluid rounded-start';
+        image.className = ' rounded-start';
         image.alt = product.title;
 
-        image.style.width = "100%"
-        image.style.height = "100%"
+        image.style.width = "100%";
+        image.style.height = "100%";
 
         col1.appendChild(image);
 
@@ -129,37 +127,39 @@ async function getPrice(Id) {
         }
     });
     let card = await res.json();
-    return card.data.cardmarket.prices;
+
+    return new Price(card.data.cardmarket.prices.averageSellPrice, card.data.cardmarket.prices.lowPrice, card.data.cardmarket.prices.trendPrice, card.data.cardmarket.prices.avg1, card.data.cardmarket.prices.avg7, card.data.cardmarket.prices.avg30);
 }
 
 
 const productModal = document.getElementById('productModal')
 
 productModal.addEventListener('show.bs.modal', event => {
-    // Button that triggered the modal
     const button = event.relatedTarget
-
-    // Extract info from data-bs-* attributes
     const index = button.getAttribute('data-bs-index')
 
     // Update the modal's content.
     const modalTitle = productModal.querySelector('.modal-title')
-    const modalBodyInput = productModal.querySelector('.modal-body input')
+    const img = productModal.querySelector('#pokemon-card');
+    const avg1 = productModal.querySelector('#avg1');
+    const avg7 = productModal.querySelector('#avg7');
+    const avg30 = productModal.querySelector('#avg30');
+    const averageSellPrice = productModal.querySelector('#avgPrice');
+    const lowPrice = productModal.querySelector('#lowPrice');
+    const trendPrice = productModal.querySelector('#trendPrice');
+    const currentPriceAlert = productModal.querySelector('#currentPriceAlert');
 
+
+    avg1.textContent = productCards[index].price.avg1 + '$';
+    avg7.textContent = productCards[index].price.avg7 + '$';
+    avg30.textContent = productCards[index].price.avg30 + '$';
+    averageSellPrice.textContent = productCards[index].price.averageSellPrice + '$';
+    lowPrice.textContent = productCards[index].price.lowPrice + '$';
+    trendPrice.textContent = productCards[index].price.trendPrice + '$';
+
+    currentPriceAlert.textContent = `Current price is ${productCards[index].price.averageSellPrice}$`
+
+
+    img.src = productCards[index].image;
     modalTitle.textContent = `${productCards[index].title}`
-        // modalBodyInput.value = recipient
 })
-
-
-async function loadCards() {
-    const temp = await fetch('https://api.pokemontcg.io/v2/cards?q=set.name:generations ', {
-        method: "GET",
-        'Content-Type': 'application/json',
-        headers: {
-
-        }
-    });
-    const b = await temp.json();
-    console.log(b);
-
-}

@@ -7,21 +7,6 @@ body {
     font-family: "Times New Roman", Times, serif;
 }
 
-@font-face {
-    font-family: Elza;
-    src: url(./fonts/ElzaTextTrial-Regular.otf);
-}
-
-@font-face {
-    font-family: Elza-Bold;
-    src: url(./fonts/ElzaTrial-BlackOblique.otf);
-}
-
-@font-face {
-    font-family: OpenSans;
-    src: url(./fonts/OpenSans-Regular.ttf);
-}
-
 .nav-item:hover {
     background: #734B5E;
     border-radius: 5rem;
@@ -34,7 +19,6 @@ body {
 .nav-item {
     font-size: 1.7em;
     text-align: center;
-    font-family: Elza;
 }
 
 .nav-item>a {
@@ -43,19 +27,12 @@ body {
 
 .navbar-brand,
 .offcanvas-title {
-    font-family: Elza;
     color: #023047;
 }
 
 .brand-logo {
     width: 4rem;
     padding: 0.2rem;
-}
-
-.navbar-brand,
-.offcanvas-title,
-.nav-item {
-    font-family: Elza-Bold;
 }
 
 #brand-font {
@@ -86,7 +63,6 @@ body {
 
 .footer-item {
     font-size: 1.2em;
-    font-family: Elza;
 }
 
 .footer {
@@ -112,10 +88,6 @@ body {
 #svgtest {
     stroke-dasharray: 1000;
     stroke-dashoffset: 0;
-}
-
-.information-content {
-    font-family: OpenSans;
 }
 
 .cta-button {
