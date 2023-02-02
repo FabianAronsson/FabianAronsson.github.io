@@ -18,7 +18,7 @@
 * Alla delar beskrivna ovan finns med.
 * ~~Sidan är uppdelad på ett strukturerat sätt med **minst tre** HTML- och CSS-filer.~~
 *  Det finns en site.js-fil som innehåller funktionaliteten för att:
-   * ~~Visa listan av produkter/tjänster. ~~
+   * ~~Visa listan av produkter/tjänster.~~
    * Visa kundvagnen.
    * Lägga till och ta bort saker ur kundvagnen.
 * Sidorna uppnår minst 80% i Lighthouse på Best Practices i både Mobile och Desktop.
