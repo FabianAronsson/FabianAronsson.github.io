@@ -135,19 +135,22 @@ async function getPrice(Id) {
 const productModal = document.getElementById('productModal')
 
 productModal.addEventListener('show.bs.modal', event => {
-    const button = event.relatedTarget
-    const index = button.getAttribute('data-bs-index')
+    const button = event.relatedTarget;
+    const index = button.getAttribute('data-bs-index');
+
+    const purchaseButton = document.querySelector('#buyButton');
+    purchaseButton.setAttribute('data-bs-index', index);
 
     // Update the modal's content.
-    const modalTitle = productModal.querySelector('.modal-title')
-    const img = productModal.querySelector('#pokemon-card');
-    const avg1 = productModal.querySelector('#avg1');
-    const avg7 = productModal.querySelector('#avg7');
-    const avg30 = productModal.querySelector('#avg30');
-    const averageSellPrice = productModal.querySelector('#avgPrice');
-    const lowPrice = productModal.querySelector('#lowPrice');
-    const trendPrice = productModal.querySelector('#trendPrice');
-    const currentPriceAlert = productModal.querySelector('#currentPriceAlert');
+    let modalTitle = productModal.querySelector('.modal-title');
+    let img = productModal.querySelector('#pokemon-card');
+    let avg1 = productModal.querySelector('#avg1');
+    let avg7 = productModal.querySelector('#avg7');
+    let avg30 = productModal.querySelector('#avg30');
+    let averageSellPrice = productModal.querySelector('#avgPrice');
+    let lowPrice = productModal.querySelector('#lowPrice');
+    let trendPrice = productModal.querySelector('#trendPrice');
+    let currentPriceAlert = productModal.querySelector('#currentPriceAlert');
 
 
     avg1.textContent = productCards[index].price.avg1 + '$';
@@ -163,3 +166,30 @@ productModal.addEventListener('show.bs.modal', event => {
     img.src = productCards[index].image;
     modalTitle.textContent = `${productCards[index].title}`
 })
+
+
+const buyButton = document.getElementById('buyButton')
+buyButton.addEventListener("click", event => {
+    const modal = bootstrap.Modal.getInstance('#productModal');
+    modal.hide();
+
+    const index = buyButton.getAttribute('data-bs-index');
+
+    const storage = sessionStorage.getItem('cart');
+    let cart;
+
+    if (storage) {
+        cart = JSON.parse(storage);
+        cart.push(productCards[index]);
+    } else {
+        cart = [productCards[index]];
+    }
+
+
+    sessionStorage.setItem('cart', JSON.stringify(cart));
+    updateCart();
+});
+
+async function updateCart() {
+
+}

@@ -85,11 +85,6 @@ body {
     margin-top: 4.5rem;
 }
 
-#svgtest {
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 0;
-}
-
 .cta-button {
     background-color: #044465 !important;
     color: white !important;
@@ -99,6 +94,30 @@ body {
 
 .main-content {
     padding-bottom: 10vh;
+}
+
+#cart {
+    background-color: #023047 !important;
+}
+
+.cart-button {
+    color: #F5D3C8;
+}
+
+#expandedCart {
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 15rem;
+    color: #F5D3C8;
+    padding-top: 0.5rem;
+}
+
+.cart-item {
+    display: flex;
+}
+
+.cart-item>h2 {
+    padding: 0 0.5rem 0 0;
 }
 
 @media screen and (max-width: 382px) {
